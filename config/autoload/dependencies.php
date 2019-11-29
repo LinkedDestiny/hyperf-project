@@ -12,10 +12,10 @@ declare(strict_types=1);
 
 use Lib\Framework\Http\Response;
 use Lib\Component\Log\LoggerFactory;
+use Lib\Component\Commands\Ast\ModelUpdateVisitor;
 use Psr\Http\Message\ResponseInterface;
-use Lib\Component\Commands\Ast\ModelUpdateVisitor as HyperfModelUpdateVisitor;
 use Hyperf\Contract\StdoutLoggerInterface;
-use \Hyperf\Database\Commands\Ast\ModelUpdateVisitor;
+use \Hyperf\Database\Commands\Ast\ModelUpdateVisitor as HyperfModelUpdateVisitor;
 
 return [
     StdoutLoggerInterface::class => LoggerFactory::class,
