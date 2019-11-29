@@ -1,0 +1,21 @@
+{
+    "name": "coding-cat/hyperf-project",
+    "type": "project",
+    "description": "hyperf-project",
+
+    "require": {
+        "php": ">=7.2",
+        "ext-swoole": ">=4.3.4",
+        "ext-json": "*",
+        "ext-redis": "*",
+        "ext-pdo": "*",
+
+        "coding-cat/hyperf-common": "dev-master"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "./app/"
+        }
+    }
+}
