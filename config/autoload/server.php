@@ -20,7 +20,7 @@ return [
             'name' => 'http',
             'type' => Server::SERVER_HTTP,
             'host' => '0.0.0.0',
-            'port' => 9501,
+            'port' => intval(env('HTTP_PORT', 9501)),
             'sock_type' => SWOOLE_SOCK_TCP,
             'callbacks' => [
                 SwooleEvent::ON_REQUEST => [Hyperf\HttpServer\Server::class, 'onRequest'],
@@ -29,7 +29,9 @@ return [
     ],
     'settings' => [
         'enable_coroutine' => true,
-        'worker_num' => 1,
+
+        'worker_num' => intval(env('WORKER_NUM', 1)),
+
         'pid_file' => 'runtime/hyperf.pid',
         'open_tcp_nodelay' => true,
         'max_coroutine' => 100000,
