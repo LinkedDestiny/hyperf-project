@@ -39,7 +39,7 @@ return [
             'gen:model' => [
                 'path' => './app/Model',
                 'force_casts' => true,
-                'inheritance' => \CC\Hyperf\Common\Framework\BaseModel::class,
+                'inheritance' => '\\CC\\Hyperf\\Common\\Framework\\BaseModel',
                 'uses' => '',
             ],
         ],
