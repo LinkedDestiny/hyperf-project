@@ -6,9 +6,9 @@ namespace App\Controller;
 
 
 use App\Service\IndexService;
-use Lib\Framework\BaseController;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\Controller;
+use CC\Hyperf\Common\Framework\BaseController;
 use Hyperf\HttpServer\Annotation\RequestMapping;
 
 /**

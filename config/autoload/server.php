@@ -29,6 +29,7 @@ return [
     ],
     'settings' => [
         'enable_coroutine' => true,
+        'daemonize' => boolval(env('DAEMONIZE', 0)),
 
         'worker_num' => intval(env('WORKER_NUM', 1)),
 

@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-if [ -f runtime/hyperf.pid ]
-then
-    cat runtime/hyperf.pid | xargs kill -15
-fi
-echo "server stop..."
-echo "clear cache..."
-sh bin/clear.sh
-echo "start server..."
+echo "stop server ..."
 
-#nohup php bin/hyperf.php start > /dev/null 2>&1 &
+# 修改 hyperf-project 为 config.config.app_name 的值
+ps aux | grep hyperf-project | awk '{print $2}' | xargs kill -15
+
+echo "stopped ..."
+
+echo "start server ..."
+sh bin/clear.sh
+php bin/hyperf.php start
+echo "started ..."

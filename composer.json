@@ -10,12 +10,27 @@
         "ext-redis": "*",
         "ext-pdo": "*",
 
+        "hyperf/rpc-server": "~1.1.0",
+        "hyperf/rpc-client": "~1.1.0",
+        "hyperf/json-rpc": "~1.1.0",
+
         "coding-cat/hyperf-common": "dev-master"
     },
 
     "autoload": {
         "psr-4": {
             "App\\": "./app/"
+        }
+    },
+
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        },
+        "hyperf-common": {
+            "type": "vcs",
+            "url": "https://github.com/LinkedDestiny/hyperf-common.git"
         }
     }
 }
